@@ -1,0 +1,40 @@
+﻿
+@{
+    ViewBag.Title = "FamilyDetails";
+}
+<script src="~/Content/Pages/jquery-3.5.1.min.js"></script>
+<script src="~/Content/Pages/EmployeeDetail.js"></script>
+
+<h2>FamilyDetails</h2>
+<div class="row">
+    <div class="col-sm-6">
+        <label> Please Enter Employee Id</label>
+        <input type="text" id="txtEmpId" name="EmpId" class="form-control " />
+    </div>
+    <div class="col-sm-6">
+        <button id="btnSearch" value="search" onclick=getRegistrationList()>SEARCH</button>
+    </div>
+</div>
+<div class="col-sm-12">
+    <table id="tblEmployeeDetail" border="1" class="table table-striped table-bordered table-hover table-condensed">
+        <thead>
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <th>EmpDetailsId</th>
+        <th>EmpId</th>
+        <th>FamilyMemberName</th>
+        <th>MemberRelation</th>
+        <th>Present Address</th>
+
+        <th>Mob No</th>
+        <th>Alternet MobNo</th>
+        <th>Adhar Detail</th>
+        <th>Occupation</th>
+        <th>Company Name</th>
+
+        </thead>
+        <tbody></tbody>
+    </table>
+    </div>

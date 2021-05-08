@@ -1,0 +1,49 @@
+﻿@{
+    ViewBag.Title = "ListofEmployee";
+}
+<script src="~/Content/Pages/jquery-3.5.1.min.js"></script>
+<script src="~/Content/Pages/Employee.js"></script>
+<h2>Employee List</h2>
+<div class="row">
+    <div class="col-sm-6"  >
+        <label> Search by Company Name</label>
+
+        <select id="ddlCompanyName" class="form-control" name="CompanyName">
+            <option>Navratna Mauganese Products LLP.</option>
+            <option>Manmohan Minerals & Chemicals Pvt. Ltd.-B</option>
+            <option>Agastya Traders</option>
+            <option>Vijay Enterprises</option>
+            <option>Mahendra Enterprises</option>
+            <option>Arusu Industries</option>
+            <option>Siddhant Enterprises</option>
+            <option>Manmohan Minerals & Chemicals Pvt.Ltd.-C</option>
+
+        </select>
+    </div>
+    <div class="col-sm-6">
+        <button id="btnSearch" value="search" onclick=getMainRegistrationList()>SEARCH</button>
+    </div>
+</div>
+<div class="col-sm-12" style="margin-left: -154px;">
+    <table id="tblEmployee" border=" 1" class="table table-striped table-bordered table-hover table-condensed">
+        <thead>
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <th>EmpId</th>
+        <th>Full Name</th>
+        <th>Present Address</th>
+        <th>Permanent Address</th>
+        <th>Mob No</th>
+        <th>Alternet MobNo</th>
+        <th>Adhar Detail</th>
+        <th>Company Name</th>
+        <th>Post</th>
+        <th>Date of Joining</th>
+        <th>Date of Birth</th>
+        <th>Photo</th>
+        </thead>
+        <tbody></tbody>
+    </table>
+</div>

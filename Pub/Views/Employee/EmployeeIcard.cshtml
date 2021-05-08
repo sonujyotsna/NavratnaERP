@@ -1,0 +1,46 @@
+﻿@model IEnumerable<NavratnaERP.Models.EmployeeModel>
+
+@{
+    ViewBag.Title = "Employee I-card";
+}
+
+
+<div>
+    @foreach (var item in Model)
+    {
+       
+<div class="col-md-4">
+    <div class="table-bordered">
+         <div class="col-md-2">
+                    <div>
+                        <img src="~/Content/logo.jpeg" alt="Avatar" style="width: 98px; height: 47px; margin-top: 15px; margin-left: -20px;">
+                    </div>
+                </div>
+                <div class="col-md-10">
+                 
+                    <h5 class="pull-right" style="margin-bottom: 0px;"><b> 	Navratna Mauganese Products LLP</b></h5>
+                    <p style="font-size:12px;text-align:center;">  J-18, MIDC Industrial area, Hingna Road<br /> Nagpur - 440016 (Maharatshtra) India</p>
+                    
+                </div>
+				 <div class="col-md-12"><h5 style="margin-bottom: 0px;"><b>  @Html.DisplayFor(modelItem => item.FullName)</b></h5></div>
+                <div class="col-md-8">
+                    <div>
+                        
+                        <p  style="font-size:12px;margin-bottom: 1px;">
+                            <b>@Html.DisplayFor(modelItem => item.Post)</b><br />
+                            DOB: @Html.DisplayFor(modelItem => item.DateofLeavingString)<br />
+                            Mobile: @Html.DisplayFor(modelItem => item.MobNo)<br />
+                            </p>
+                        <p style="font-size:10px;height:50px;">
+                            Address: @Html.DisplayFor(modelItem => item.PresentAddress)
+                        </p>
+                       
+                    </div>
+                </div>
+        <div class="col-md-4">
+            <img src="~/Content/images/@item.Photo" alt="Photo" style="width:80px;height:100px">
+
+        </div>
+    </div>
+</div>}
+</div>

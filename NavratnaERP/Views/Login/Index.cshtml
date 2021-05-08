@@ -1,0 +1,78 @@
+﻿@using NavratnaERP.Models;
+@model LoginModel
+@{ Layout = null; }
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Navratna ERP</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <link href="~/Content/jquery-confirm-master/css/jquery-confirm.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Navratna ERP", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary(true)
+        @if (@ViewBag.Message != null)
+        {
+<div class="form-group">
+    @ViewBag.Message
+</div>}
+
+        @using (Html.BeginForm("LoginIn", "Login", FormMethod.Post))
+        {
+<div class="loginLogo">
+    <img src="~/assets/images/logo.svg" alt="">
+</div>
+                <div class="loginHeading">
+                    <h2>LOGIN</h2>
+                </div>
+                                <div class="formContents">
+                                    <h3>Welcome back,</h3>
+                                    <div class="form-group">
+                                        @*<input type="text" id="loginUsername" autocomplete="off" class="form-control">
+                                            <label for="loginUsername">Kitchen ID</label>*@
+                                        @Html.LabelFor(a => a.UserName)
+                                        @Html.TextBoxFor(a => a.UserName, new { @class = "form-control" })
+
+                                        @Html.ValidationMessageFor(a => a.UserName)
+                                    </div>
+                                    <div class="form-group">
+                                        @*<input type="text" id="loginPassword" autocomplete="off" class="form-control">
+                                            <label for="loginPassword">Password</label>*@
+                                        @Html.LabelFor(a => a.Password)
+                                        @Html.PasswordFor(a => a.Password, new { @class = "form-control" })
+
+                                        @Html.ValidationMessageFor(a => a.Password)
+                                    </div>
+                                    <div class="form-group loginbuttonsSections">
+                                        <a href="" class="forgotPasswordText">Forgot Password?</a>
+                                        <input type="submit" value="Login" class="btn btn-info" />
+                                        
+
+                                    </div>
+                                </div>}
+    </div>
+    <hr />
+
+    <footer>
+        <p>&copy; @DateTime.Now.Year - Navratna ERP</p>
+    </footer>
+
+</body>
+</html>

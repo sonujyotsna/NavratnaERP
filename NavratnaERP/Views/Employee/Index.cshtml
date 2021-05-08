@@ -1,0 +1,119 @@
+﻿
+@{
+    ViewBag.Title = "Add Employee";
+}
+
+<h2>Add Employee</h2>
+<script src="~/Content/Pages/jquery-3.5.1.min.js"></script>
+<script src="~/Content/Pages/Employee.js"></script>
+<input type="hidden" id="hdnEmpId" value="" />
+<div class="col-md-12">
+
+    <div class="col-md-6">
+        <div class="form-group">
+            <label>EmpId</label>
+            <input type="text" id="hdnId" name="EmpId" class="form-control " readonly />
+        </div>
+        <div class="form-group">
+            <label>Full Name</label>
+            <input type="text" id="txtFullName" name="FullName" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label>Present Address</label>
+            <textarea type="text"  id="txtPresentAddress" name="PresentAddress" class="form-control"></textarea>
+        </div>
+        <div class="form-group">
+            <label>Permanent Address</label>
+            <textarea type="text" id="txtPermanentAddress" name="PermanentAddress" class="form-control"></textarea>
+        </div>
+        <div class="form-group">
+            <label>Mobile No.</label>
+            <input type="text" id="txtMobNo" name="MobNo" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label>Alternet Mobile No.</label>
+            <input type="text" id="txtAlternetMobNo" name="AlternetMobNo" class="form-control" />
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="form-group">
+            <label>Adhar Detail</label>
+            <input type="text" id="txtAdharDetail" name="AdharDetail" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label>Company Name</label>
+            <select id="ddlCompanyName" class="form-control" name="CompanyName">
+                <option>Navratna Mauganese Products LLP.</option>
+                <option>Manmohan Minerals & Chemicals Pvt. Ltd.-B</option>
+                <option>Agastya Traders</option>
+                <option>Vijay Enterprises</option>
+                <option>Mahendra Enterprises</option>
+                <option>Arusu Industries</option>
+                <option>Siddhant Enterprises</option>
+                <option>Manmohan Minerals & Chemicals Pvt.Ltd.-C</option>
+
+            </select>
+            @*<input type="text" id="txtCompanyName" name="CompanyName" class="form-control" />*@
+        </div>
+        <div class="form-group">
+            <label>Post</label>
+            <select id="ddlPost" class="form-control">
+                <option>Accounts Manager</option>
+                <option>Export Manager</option>
+                <option>General Manager</option>
+                <option>Production Manager</option>
+                <option>Purchase Executive</option>
+                <option>Purchase Manager</option>
+                <option>Export Assistant</option>
+                <option>Accounts Assistant</option>
+                <option>Personal Assistant</option>
+                <option>HR Executive</option>
+                <option>HR Manager</option>
+                <option>Production Supervisor</option>
+                <option>Supervisor</option>
+                <option>Lab Chemist</option>
+                <option>Chemist</option>
+                <option>Labour</option>
+                <option>Store Incharge</option>
+                <option>Maintenence Head</option>
+                <option>Store Assistant</option>
+                <option>Assistant</option>
+                <option>Office Assistant</option>
+                <option>Driver[Lift]</option>
+                <option>Driver[Car]</option>
+                <option> Driver[JCB]</option>
+                <option>Turner</option>
+                <option>Welder</option>
+                <option>Fitter</option>
+                <option>Helper</option>
+                <option>Engineer[Electrical]</option>
+                <option>Engineer[Civil]</option>
+                <option>Engineer[Mines]</option>
+                <option>Engineer[Mechanical]</option>
+                <option>Security Guard</option>
+                <option>Security Incharge</option>
+                <option>Gardener</option>
+                <option>Housekeeping Ladies</option>
+
+            </select>
+            @*<input type="text" id="txtPost" name="Post" class="form-control" />*@
+        </div>
+        <div class="form-group">
+            <label>Date Of Joining</label>
+            <input type="date" id="txtDateofJoining" name="DateofJoining" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label>DateofBirth</label>
+            <input type="date" id="txtDateofLeaving" name="DateofLeaving" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label>Photo:</label>
+            <input type="file" id="File1" class="form-control" placeholder="Upload the Photo" />
+        </div>
+        <button id="btnSave" value="submit" onclick=saveRegistration()>SAVE</button>
+
+    </div>
+      
+       
+    </div>
+
